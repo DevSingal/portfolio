@@ -1,22 +1,65 @@
-import React from 'react'
+import React from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FiSun } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import { RxCross1 } from "react-icons/rx";
+
 // import "../styles/navbar.css";
 
 const Navbar = () => {
+  const openMenu = () => {
+    document.querySelector(".menu").classList.add("active");
+  };
+
+  const closeMenu = () => {
+    document.querySelector(".menu").classList.remove("active");
+  };
+
   return (
+    <>
+      <div className="navbar">
+        <div className="navbar_right">
+          <button id="theme_btn">
+            <FiSun />
+          </button>
 
-    // create me a navbar with menu and dark/light mode icon on the right side of the navbar 
-    
-    <div className="navbar">
-        <div className="navbar__right">
-            <a href="#theme"><FiSun /></a>
-            <a href="#menuIcon"><AiOutlineMenu /></a>
+          <button id="menu_btn">
+            <AiOutlineMenu onClick={openMenu} className="open" />
+          </button>
         </div>
-    </div>
+      </div>
 
+      {/* //create a full page menu */}
+      <div className="menu">
+        <div className="menu_close">
+          <RxCross1 onClick={closeMenu} className="close" />
+        </div>
+        <ul className="menu_list">
+          <li className="menu_list_item">
+            <Link to="/" className="menu_link" onClick={closeMenu}>
+              Home
+            </Link>
+          </li>
+          <li className="menu_list_item">
+            <Link to="/projects" onClick={closeMenu} className="menu_link">
+              Projects
+            </Link>
+          </li>
+          <li className="menu_list_item">
+            <Link to="/about" onClick={closeMenu} className="menu_link">
+              About Me
+            </Link>
+          </li>
 
-  )
-}
+          <li className="menu_list_item">
+            <Link to="/contact" onClick={closeMenu} className="menu_link">
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;
