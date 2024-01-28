@@ -3,6 +3,8 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { FiSun } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { RxCross1 } from "react-icons/rx";
+import { FaGithub } from "react-icons/fa";
+
 
 // import "../styles/navbar.css";
 
@@ -18,10 +20,16 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
+        <div className="logo">
+          <Link to="/" className="logo_link">
+            <img src="./nintendo-ds.png" alt="" />
+          </Link>
+        </div>
         <div className="navbar_right">
           <button id="theme_btn">
             <FiSun />
           </button>
+          <a href="https://github.com/DevSingal" target="_blank" ><FaGithub /></a>
 
           <button id="menu_btn">
             <AiOutlineMenu onClick={openMenu} className="open" />

@@ -1,17 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-$secandoryColor: #ffd16a;
-$font1: "Montserrat", sans-serif;
-$font2: "Poppins", sans-serif;
+//create a light theme and a dark theme for the website
 
-@mixin heading {
-  color: #ffd689;
-  margin: 1cm auto;
-  width: fit-content;
-  font-size: 3.5rem;
-  font-family: $font1;
-  font-weight: 300;
-}
+
+
+@import "./variables";
+@import "./scrollbar";
+@import "./mixin";
+
+
+
+@import "~bootstrap/scss/bootstrap";
 
 
 
@@ -26,37 +25,47 @@ html {
 }
 
 body {
-  background-color: rgb(15 23 42);
+  background-color: $primaryColor;
+  color: $theme-color;
+  overflow-x: hidden;
 }
+
+
 
 .navbar {
   height: 15vh;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   padding: 0mm 8mm;
+
+  .logo {
+    position: absolute;
+    top: 5dvh;
+    left: 10dvh;
+  }
 }
 
 .navbar_right {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 7rem;
+  width: 11rem;
 
   position: absolute;
-  top: 94px;
-  right: 120px;
+  top: 5dvh;
+  right: 10dvh;
 
-  button {
+  button, a {
     background-color: transparent;
     border: none;
-    color: white;
+    color: $theme-color;
     font-size: 2.2rem;
     font-weight: bold;
     transition: all 0.3s ease;
     cursor: pointer;
   }
 }
+
 
 /* .navbar a{
     margin-left: 2rem;
@@ -149,7 +158,7 @@ body {
   background-color: #1f2833;
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: -100vh;
   right: 0;
   transition: top 0.5s ease;
@@ -162,6 +171,7 @@ body {
   ul {
     list-style: none;
     text-align: center;
+    padding: 0;
   }
 
   li {
@@ -205,7 +215,7 @@ body {
   }
 
   .intro {
-    color: white;
+    color: $theme-color;
     font-size: 1.6rem;
     width: 80%;
     margin: 1cm auto;
@@ -241,7 +251,7 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        margin-bottom: 5mm;
+        // margin-bottom: 5mm;
       }
     }
 
@@ -260,7 +270,7 @@ body {
       }
 
       p {
-        color: white;
+        color: $theme-color;
         font-size: 1.4rem;
         width: 100%;
         line-height: 35px;
@@ -289,80 +299,166 @@ body {
   }
 }
 
+.football {
+  a {
+    text-decoration: none;
+    color: #ffd16a;
+    font-size: 1.4rem;
+    text-decoration: underline;
+    font-family: "Montserrat", sans-serif;
+  }
 
-.football{
+  a:hover {
+    color: #fff;
+  }
 
-  .info_container{
+  .info_container {
     width: 80%;
     display: flex;
     margin: auto;
     margin-bottom: 2cm;
 
-    p{
-      color: white;
-        font-size: 1.4rem;
-        width: 100%;
-        line-height: 35px;
-        font-family: $font2;
-        font-weight: 200;
-        margin: 0 5mm;
+    p {
+      color: $theme-color;
+      font-size: 1.4rem;
+      width: 100%;
+      line-height: 35px;
+      font-family: $font2;
+      font-weight: 200;
+      margin: 0 5mm;
     }
-
   }
 
-  h1{
- @include heading();
+  h1 {
+    @include heading();
   }
 
-  .img_container{
-      border-radius: 1rem;
-      overflow: hidden;
+  .img_container {
+    border-radius: 1rem;
+    overflow: hidden;
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 
-.anime{
-  h1{
- @include heading();
+.anime {
+  h1 {
+    @include heading();
   }
 
-  .img_container{
-      
-  .info_container{
+  .info_container {
     width: 80%;
     display: flex;
     margin: auto;
     margin-bottom: 2cm;
 
-    p{
-      color: white;
-        font-size: 1.4rem;
-        width: 100%;
-        line-height: 35px;
-        font-family: $font2;
-        font-weight: 200;
-        margin: 0 5mm;
+    p {
+      color: $theme-color;
+      font-size: 1.4rem;
+      width: 100%;
+      line-height: 35px;
+      font-family: $font2;
+      font-weight: 200;
+      margin: 0 10mm;
+    }
+  }
+
+  .img_container {
+    border-radius: 1rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .accordian {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2cm;
+    .accordian_item {
+      background-color: rgba(255, 255, 255, 0.323);
     }
 
-  }
+    .accordian_body {
+      color: $theme-color;
+      font-size: 1rem;
+      width: 100%;
+      line-height: 35px;
+      font-family: $font2;
+      font-weight: 200;
+    }
 
-  h1{
- @include heading();
-  }
-
-  .img_container{
-      border-radius: 1rem;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    ol {
+      display: flex;
+      /* align-items: baseline; */
+      justify-content: space-around;
+      flex-direction: column;
+   
+      width: 100%;
+      li {
+        margin: 0 5mm;
       }
+    }
+  }
+
+}
+
+.projects {
+  h1 {
+    @include heading();
+  }
+
+  .project{
+    width: 100%;
+    background-color:  #ffe6b84d;
+    padding: 5mm;
+    border-radius: 4mm;
+    margin: 1cm 0;
+  }
+
+  .project_container {
+    width: 80%;
+    color: $theme-color;
+    margin: auto;
+
+    h2 {
+      font-size: 2.5rem;
+      font-family: $font2;
+      font-weight: 300;
+      margin-bottom: 5mm;
+    }
+
+    p {
+      font-size: 1.2rem;
+      width: 100%;
+      line-height: 35px;
+      font-family: $font1;
+      font-weight: 200;
+    }
+
+    .project_text {
+      a {
+        text-decoration: none;
+        color: #ffd16a;
+        font-size: 1.2rem;
+        font-family: "Montserrat", sans-serif;
+        margin: 0 5mm;
+      }
+
+      a:hover {
+        color: #fff;
+      }
+    }
   }
 }
+
+
+
+@import "./mediaQueries";

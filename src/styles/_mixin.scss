@@ -1,0 +1,10 @@
+@mixin heading {
+    color: $secandoryColor;
+    margin: 1cm auto;
+    width: fit-content;
+    font-size: 3.5rem;
+    font-family: $font1;
+    font-weight: 300;
+  }
+
+  // _themes.scss

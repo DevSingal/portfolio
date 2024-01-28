@@ -17,7 +17,7 @@ const About = () => {
           year now. I participated in XLR8 this year and we got 3rd place in
           the event, had a lot of fun in that but our both esp32 and esp01 got
           burnt once. MS101 was a hellish experience (though I got a 10 💁‍♂️),
-          electrical was the tougher part for me (that opam fucked me real
+          electrical was the tougher part for me (that op-amp fucked me real
           good) and had to build UTM (universal testing machine) in our project
           but we managed to build that somehow. My hobbies are playing football,
           watching anime, and programming.
