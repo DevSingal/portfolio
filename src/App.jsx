@@ -1,10 +1,10 @@
 // Desc: This is the main app file
 import React from "react";
 import Navbar from "./components/Navbar.jsx";
-import Home from "./components/home";
+import Home from "./components/Home.jsx";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import Projects from "./components/Projects";
-import About from "./components/About";
+import Projects from "./components/Projects.jsx";
+import About from "./components/About.jsx";
 import Football from "./components/Football.jsx";
 import Anime from "./components/Anime.jsx";
 import Coding from "./components/Coding.jsx";
