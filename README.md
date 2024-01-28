@@ -1,3 +1,7 @@
+##What have i done in this project?
+
+I have created my portfolio website using React.js which includes my projects that i have completed in past. I have mainly used SASS for styling my website and used Email.js for client to send me emails. I did not used nodemailer.js beacuase then i would have to make backend and all and found this an easy alternative.
+
 to run the website run the following commands in your device:
 
 1. downlaod all the files in your device
