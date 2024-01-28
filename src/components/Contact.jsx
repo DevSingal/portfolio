@@ -1,9 +1,12 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 
 export const ContactUs = () => {
   const form = useRef();
 
+
+  // sending email to my email using email.js
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -11,9 +14,11 @@ export const ContactUs = () => {
       .then((result) => {
           console.log(result.text);
           console.log("message sent");
+          toast.success("Message Sent");
           e.target.reset();
       }, (error) => {
           console.log(error.text);
+          toast.error("Some Error occured!")
       });
   };
 

@@ -9,17 +9,16 @@ import Football from "./components/Football.jsx";
 import Anime from "./components/Anime.jsx";
 import Coding from "./components/Coding.jsx";
 import { ContactUs } from "./components/Contact.jsx"
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
-  // set up react router dom
-
-
-
+ 
 
   return (
       <BrowserRouter>
           <Navbar />
+          <Toaster/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
