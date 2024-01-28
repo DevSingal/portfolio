@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FiSun } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -17,6 +17,7 @@ const Navbar = () => {
     document.querySelector(".menu").classList.remove("active");
   };
 
+
   return (
     <>
       <div className="navbar">
@@ -26,9 +27,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar_right">
-          <button id="theme_btn">
-            <FiSun />
-          </button>
+          
           <a href="https://github.com/DevSingal" target="_blank" ><FaGithub /></a>
 
           <button id="menu_btn">

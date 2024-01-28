@@ -11989,8 +11989,6 @@ html {
 
 body {
   background-color: rgb(15, 23, 42);
-  color: white;
-  overflow-x: hidden;
 }
 
 .navbar {
@@ -12009,12 +12007,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 11rem;
+  width: 8rem;
   position: absolute;
   top: 5dvh;
   right: 10dvh;
 }
-.navbar_right button, .navbar_right a {
+.navbar_right button,
+.navbar_right a {
   background-color: transparent;
   border: none;
   color: white;
@@ -12372,6 +12371,41 @@ body {
   color: #fff;
 }
 
+.contact {
+  background-color: rgba(255, 255, 255, 0.2117647059);
+  width: 30%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1cm;
+  border-radius: 5mm;
+}
+.contact input, .contact textarea {
+  padding: 5px 15px;
+  border-radius: 2mm;
+  color: black;
+  outline: none;
+  /* color: #74e5e5; */
+  font-size: 1.2rem;
+  margin: 5mm 0;
+  font-family: "Montserrat", sans-serif;
+}
+.contact h2, .contact .h2 {
+  color: #ffd16a;
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 2.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+.contact .submit {
+  outline: none;
+  border: none;
+  background-color: rgb(15, 23, 42);
+  color: white;
+}
+
 @media only screen and (max-width: 600px) {
   .navbar .navbar_right {
     right: 6vh;
@@ -12425,6 +12459,9 @@ body {
     font-size: 1.2rem;
     margin: 1cm auto;
   }
+  .contact {
+    width: 80%;
+  }
 }
 @media only screen and (max-height: 550px) {
   .menu .menu_link {
@@ -12448,5 +12485,8 @@ body {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .contact {
+    width: 50%;
   }
 }/*# sourceMappingURL=master.css.map */

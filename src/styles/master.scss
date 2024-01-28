@@ -2,17 +2,11 @@
 
 //create a light theme and a dark theme for the website
 
-
-
 @import "./variables";
 @import "./scrollbar";
 @import "./mixin";
 
-
-
 @import "~bootstrap/scss/bootstrap";
-
-
 
 * {
   margin: 0;
@@ -26,11 +20,7 @@ html {
 
 body {
   background-color: $primaryColor;
-  color: $theme-color;
-  overflow-x: hidden;
 }
-
-
 
 .navbar {
   height: 15vh;
@@ -49,13 +39,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 11rem;
+  width: 8rem;
 
   position: absolute;
   top: 5dvh;
   right: 10dvh;
 
-  button, a {
+  button,
+  a {
     background-color: transparent;
     border: none;
     color: $theme-color;
@@ -65,7 +56,6 @@ body {
     cursor: pointer;
   }
 }
-
 
 /* .navbar a{
     margin-left: 2rem;
@@ -400,14 +390,13 @@ body {
       /* align-items: baseline; */
       justify-content: space-around;
       flex-direction: column;
-   
+
       width: 100%;
       li {
         margin: 0 5mm;
       }
     }
   }
-
 }
 
 .projects {
@@ -415,9 +404,9 @@ body {
     @include heading();
   }
 
-  .project{
+  .project {
     width: 100%;
-    background-color:  #ffe6b84d;
+    background-color: #ffe6b84d;
     padding: 5mm;
     border-radius: 4mm;
     margin: 1cm 0;
@@ -459,6 +448,44 @@ body {
   }
 }
 
+.contact {
+  
+    background-color: #ffffff36;
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1cm;
+    border-radius: 5mm;
 
+   input, textarea{
+    padding: 5px 15px;
+    border-radius: 2mm;
+    color: black;
+    outline: none;
+    /* color: #74e5e5; */
+    font-size: 1.2rem;
+    margin: 5mm 0;
+    font-family: $font1;
+   }
+
+   h2{
+    color: #ffd16a;
+    margin: 0 auto;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 2.2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+   }
+
+   .submit{
+    outline: none;
+    border: none;
+    background-color: $primaryColor;
+    color: white;
+   }
+  
+}
 
 @import "./mediaQueries";
