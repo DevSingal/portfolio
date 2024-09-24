@@ -7,10 +7,10 @@ const Home = () => {
     <div className="home">
   <div className="textContainer">
   <p className='p1'>
-  HEY, I am Dev Singal a freshie in the
+  HEY, I am Dev Singal a Sophomore in the
   </p>
   <p className='p2'>
-  environmental science and engineering department. I am a MERN stack web developer
+  environmental science and engineering department at IIT Bombay. I am a MERN stack web developer
     </p>
 
     <div className="btnContainer">
